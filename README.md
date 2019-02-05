@@ -56,3 +56,19 @@ List of reserved strings in URL: [https://www.w3schools.com/tags/ref_urlencode.a
 
 **NOTE:**
 When PHP loads an URL, it automatically decodes the URL, and store it in $_GET
+
+## Encoding for HTML
+
+### Cross-Site Scripting
+- XSS
+- Attacker tricks a web page into outputting JavaScript
+- Code is trusted by the browser and executed
+- Major security vulnerability
+
+```
+// Cases we want to avoid
+
+/LinkedInLearning/FreePHPTutorialWithMySQL/project/globe_bank/public/staff/subjects/show.php?id=<strong>1</strong>
+
+/LinkedInLearning/FreePHPTutorialWithMySQL/project/globe_bank/public/staff/subjects/show.php?id=<script>alert('Gotcha')</script>
+```
